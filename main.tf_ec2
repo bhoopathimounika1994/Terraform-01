@@ -1,0 +1,10 @@
+provider "aws" {
+  region = "us-east-1"
+}
+
+module "ec2_instance" {
+  source = "./modules/modules/ec2_instance" 
+  ami           = "ami-00f251754ac5da7f0"
+  instance_type = "t2.micro"
+  subnet_id     = "subnet-0008bbfba8b07f7a1"
+}
